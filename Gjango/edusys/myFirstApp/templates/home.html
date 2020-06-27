@@ -1,0 +1,116 @@
+{% extends 'index.html' %}
+
+{% block head %}
+{% load static %}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ziyat.kz</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link href="{% static 'css/templatemo_style.css' %}" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="{% static 'css/nivo-slider.css' %}" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/ddsmoothmenu.css' %}" />
+
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/ddsmoothmenu.js' %}">
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //hori or vertical menu
+	classname: 'ddsmoothmenu', //class add
+	contentsource: "markup" //"container id"
+})
+
+</script>
+
+<script type="text/javascript" src="{% static 'js/jquery-1-4-2.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/slimbox2.css' %}" type="text/css" media="screen" />
+<script type="text/JavaScript" src="{% static 'js/slimbox2.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+
+ {% load static %}
+  <div id="templatemo_slider">
+           <div id="slider-wrapper">
+                <div id="slider" class="nivoSlider">
+                    <img src="{% static 'images/slider/01.jpg' %}" alt="Slider 01" title="Ziyat first developer center in Kazahstan." />
+                    <a href="#"><img src="{% static 'images/slider/02.jpg' %}" alt="Slider 02" title="Subjects,courses,teachers at high-quality. " /></a>
+                    <img src="{% static 'images/slider/03.jpg' %}" alt="Slider 03" title="Just imagine if you study at our center." />
+                    <img src="{% static 'images/slider/04.jpg' %}" alt="Slider 04" title="First lesson is free." />
+                    <img src="{% static 'images/slider/05.jpg' %}" alt="Slider 05" title="If you would to learn more com to Ziyat." />
+                </div>
+                <div id="htmlcaption" class="nivo-html-caption">
+                    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+                </div>
+            </div>
+            <script type="text/javascript" src="{% static 'js/jquery-1.4.3.min.js' %}"></script>
+            <script type="text/javascript" src="{% static 'js/jquery.nivo.slider.pack.js' %}"></script>
+            <script type="text/javascript">
+            $(window).load(function() {
+                $('#slider').nivoSlider();
+            });
+            </script>
+  </div>
+  <div id="templatemo_main">
+            <div class="col col23">
+                <h2>Welcome to education center Ziyat</h2>
+                <p><em>CRM system for accounting of clients, interactive schedule of groups, subscriptions, discounts, payment, salaries of teachers, SMS notifications and much more. </em></p>
+                <p>Very good relationship with our pupils and we hard working with them at now. <strong>templatemo</strong> website. Thank you. We believe that UStudy's success depends directly on social contribution, so we assess our effectiveness not by profitability, but by the growth of grateful customers. Compare <a href="http://www.dostykbilim.kz" rel="nofollow"><strong>Dostyk</strong></a> &amp; <a href="https://ustudy.kz/" rel="nofollow"><strong>Ustudy</strong></a>.</p>
+                <div class="cleaner h40"></div>
+                <h3>High-quality</h3>
+              	<img src="{% static 'images/qqq.jpg' %}" alt="" class="img_fl img_border" />
+                <h4>Learning with time management</h4>
+                <p>We are open to change, so we support and create useful and promising innovations in education..</p>
+                <a href="#">More</a>
+                <div class="cleaner h40"></div>
+                <h3>Development</h3>
+              	<img src="{% static 'images/templatemo_image_02.jpg' %}" alt="" class="img_fl img_border" />
+                <h4>Improve our company</h4>
+                <p>We invest resources in the comprehensive development of our employees, so we put their comfort and interests first.</p>
+                <a href="#">More</a>
+            </div>
+            <div class="col col13 no_margin_right">
+                <h2>Courses</h2>
+                <p><em>There are more courses at high schools .</em></p>
+                <p>We believe that everyone who works for the benefit of education is our like-minded person, so we have no competitors, we have only partners..</p>
+                <ul class="tmo_ul_list">
+                    <li class="first"><a href="#">English language</a></li>
+                    <li><a href="#">Biology</a></li>
+                    <li><a href="#">Algebra(math)</a></li>
+                    <li><a href="#">Russian language</a></li>
+                    <li><a href="#">Chemistry</a></li>
+                    <li><a href="#">Physics</a></li>
+                    <li><a href="#">Geography</a></li>
+                    <li><a href="#">Kazakh language</a></li>
+                </ul>
+                <div class="cleaner h40"></div>
+                <div id="newsletter">
+                    <h4>Comment</h4>
+                    <p>If you have a question or something hate write here!. </p>
+                    <form action="#" method="get">
+                      <input type="text" value="" name="keyword" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+                      <input type="submit" name="Send" value=" Send " alt="Send" id="subscribe_btn" title=" Send " class="subscribe_btn"  />
+                      <div class="cleaner"></div>
+                    </form>
+                    <div class="cleaner"></div>
+                </div>
+            </div>
+            <div class="cleaner"></div>
+        </div>
+    </div>
+
+{% endblock %}

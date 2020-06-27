@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load static %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {% block head %}
+        <title>Ziyat.kz</title>
+    {% endblock %}
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link href="{% static 'css/templatemo_style.css' %}" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/ddsmoothmenu.css' %}" />
+
+<script language="javascript" type="text/javascript">
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+</script>
+
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/ddsmoothmenu.js' %}">
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //hori or vertical menu
+	classname: 'ddsmoothmenu', //class add
+	contentsource: "markup" //"container id"
+})
+
+</script>
+
+<script type="text/javascript" src="{% static 'js/jquery-1.4.3.min.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/slimbox2.css' %}" type="text/css" media="screen" />
+<script type="text/JavaScript" src="{% static 'js/slimbox2.js' %}"></script>
+
+</head>
+<body>
+
+<div id="templatemo_body_wrapper">
+    <div id="templatemo_wrapper"><span id="templatemo_wrapper_top"></span>
+        <div id="templatemo_header">    
+            <div id="site_title"><a href="#">Ziyat education center</a></div>
+            <div id="templatemo_menu" class="ddsmoothmenu">
+                <ul>
+                    {% if user.is_authenticated %}
+                        <li><a href="/teacher/" class="selected">Home</a></li>
+                        <li><a href="{% url 'profile' %}">{{user.username}}</a></li>
+                        <li><a href="{% url 'logout' %}">Log out</a></li>
+
+                    {% else %}
+                        <li><a href="/" class="selected">Home</a></li>
+                        <li><a href="/about/">About us</a></li>
+                        <li><a href="{% url 'login' %}">Log in</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                    {% endif %}
+
+                </ul>
+                <br style="clear: left" />
+            </div> 
+        </div>
+
+        <div class="container">
+
+        {% block content %}
+
+        {% endblock %}
+
+        </div>
+    </div>
+
+
+    <div id="templatemo_bottom">
+        <div class="col col14">
+            <h4>Contact</h4>
+            <ul class="footer_gallery">
+                <li><a href="{% static 'images/templatemo_image_03_l.jpg' %}"  rel="lightbox[portfolio]"><img src="{% static 'images/templatemo_image_03.jpg' %}" alt="Image 01" /></a></li>
+                <li><a href="{% static 'images/templatemo_image_04_l.jpg' %}"  rel="lightbox[portfolio]"><img src="{% static 'images/templatemo_image_04.jpg' %}" alt="Image 02" /></a></li>
+                <li><a href="{% static 'images/templatemo_image_05_l.jpg' %}"  rel="lightbox[portfolio]"><img src="{% static 'images/templatemo_image_05.jpg' %}" alt="Image 03" /></a></li>
+                <li><a href="{% static 'images/templatemo_image_06_l.jpg' %}"  rel="lightbox[portfolio]"><img src="{% static 'images/templatemo_image_06.jpg' %}" alt="Image 04" /></a></li>
+                <li><a href="{% static 'images/templatemo_image_07_l.jpg' %}"  rel="lightbox[portfolio]"><img src="{% static 'images/templatemo_image_07.jpg' %}" alt="Image 05" /></a></li>
+                <li><a href="{% static 'images/templatemo_image_08_l.jpg' %}"  rel="lightbox[portfolio]"><img src="{% static 'images/templatemo_image_08.jpg' %}" alt="Image 06" /></a></li>
+                <li><a href="{% static 'images/templatemo_image_09_l.jpg' %}"  rel="lightbox[portfolio]"><img src="{% static 'images/templatemo_image_09.jpg' %}" alt="Image 07" /></a></li>
+                <li><a href="{% static 'images/templatemo_image_10_l.jpg' %}"  rel="lightbox[portfolio]"><img src="{% static 'images/templatemo_image_10.jpg' %}" alt="Image 08" /></a></li>
+                <li><a href="{% static 'images/templatemo_image_11_l.jpg' %}"  rel="lightbox[portfolio]"><img src="{% static 'images/templatemo_image_11.jpg' %}" alt="Image 09" /></a></li>
+            </ul>
+            <div class="cleaner h20"></div>
+            <a href="/contact/" class="more">more</a>
+        </div>
+        
+        <div class="col col14">
+            <h4>Vkontakte and Facebook</h4>
+            <ul class="no_bullet">
+                <li>
+                    <span class="header"><a href="#">https://vk.com/newsepl </a></span>
+                    VKontakte [3] (international name: VK)is a Russian social network headquartered in St. Petersburg. The site is available in more than 90 languages; it is especially popular among Russian-speaking users.
+                </li>
+                <li>
+                    <span class="header"><a href="#">https://www.facebook.com/messages</a></span>
+                    The first name of the site was called TheFacebook, and it became available only to Harvard University students, and later the road was opened to students of other Boston universities, and then edu.
+                </li>
+            </ul>
+        </div>
+        
+        <div class="col col14">
+            <h4>Twitter</h4>
+            <ul class="no_bullet">
+                <li><a href="#">https://twitter.com/</a> </li>
+                <li>Search on social networks allows you to find interesting information about people, knowing their name and surname, as well as any news and mentions corresponding to the entered query. To search for information in the social network Twitter, you must enter a query in the search bar and select the appropriate social.network from the proposed list. After the user clicks the "Find" button, the system will redirect him to the official page of the social network Twitter..</li>
+              
+            </ul>
+        </div>
+        
+        <div class="col col14 ">
+            <h4>About</h4>
+            <p>
+            We believe that the success of UStudy depends directly on social contribution, so we evaluate our efficiency not by profitability, but by the growth of grateful customers ,we are open to change, so we support and create useful and promising innovations in the field of education.</p>
+        </div>
+        
+        <div class="cleaner"></div>
+    </div>
+    
+    <div id="templatemo_footer_wrapper">
+        <div id="templatemo_footer">
+            Copyright © 2019 <a href="#">Official Ziyat</a>
+        </div>
+    </div>
+</div>
+
+{% block body %}
+{% endblock %}
+
+</body>
+</html>

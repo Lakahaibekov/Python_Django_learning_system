@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+ {% load static %}
+
+<div id="templatemo_main">
+            <h2>Contact Us</h2>
+            <div class="col col23">
+            	<h5>Send us a message now!</h5>
+
+                 <div id="contact_form">
+                       <form method="post" name="contact" action="#">
+                            <p>
+                                <label for="author">Name:</label>
+                                <input type="text" id="author" name="author" class="required input_field" />
+                            </p>
+                            <p>
+                                <label for="email">Email:</label>
+                                <input type="text" id="email" name="email" class="validate-email required input_field" />
+                            </p>
+                            <p class="no_margin_right">
+                                <label for="subject">Subject:</label>
+                                <input type="text" name="subject" id="subject" class="input_field" />
+                            </p>
+                            <div class="cleaner h20"></div>
+
+                            <label for="text">Message:</label>
+                            <textarea id="text" name="text" rows="0" cols="0" class="required"></textarea>
+                            <div class="cleaner h20"></div>
+
+                            <input type="submit" value="Send" id="submit" name="submit" class="submit_btn float_l" />
+                            <input type="reset" value="Reset" id="reset" name="reset" class="submit_btn float_r" />
+                      </form>
+                 </div>
+            </div>
+
+            <div class="col col13 no_margin_right">
+            	<h4>Mailing Address</h4>
+                <h6><strong>Company Name</strong></h6>
+                    123.Avezov Ziyat learning educational center,<br />
+
+
+
+                <strong>Phone:</strong> 8 727 255 38 11 <br />
+                <strong>Email:</strong> <a href="mailto:info@company.com">ziyat@mail.com</a>  <br />
+                <div class="cleaner h40"></div>
+
+                <div class="img_border">
+                <iframe width="270" height="270" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7d79cebfd05aeb7197e8bfaf0a47657899522f35e17a60190c2d61ade5483fcc&amp;source=constructor" width="500" height="400" frameborder="0"></iframe>
+            	</div>
+
+        	</div>
+			<div class="cleaner"></div>
+    </div>
+
+{% endblock %}
